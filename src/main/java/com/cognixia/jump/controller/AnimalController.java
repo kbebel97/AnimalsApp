@@ -50,7 +50,7 @@ public class AnimalController {
 		
 		newAnimal.setId(-1L);
 		
-		Animal added = service.save(newAnimal); // save() does an insert or update (depends on id passed)
+		Animal added = service.save(newAnimal); 
 		
 		System.out.println("Added: " + added);
 		 
@@ -59,7 +59,7 @@ public class AnimalController {
 	@PutMapping("/update/animal")
 	public @ResponseBody String updateAnimal(@RequestBody Animal updateAnimal) {
 		
-		// check if student exists, then update them
+
 		
 		Optional<Animal> found = service.findById(updateAnimal.getId());
 		
